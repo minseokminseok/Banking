@@ -1,6 +1,7 @@
-package banking2;
+package banking6;
 
-public class HighCreditAccount extends Account {
+public class HighCreditAccount extends Account implements MenuChoice {
+//	private static final long serialVersionUID = 1L;
 	private int interest;
 	private char grade;
 	
@@ -11,9 +12,9 @@ public class HighCreditAccount extends Account {
 	public int getHighInter(char grade) {
 		int answer = 0;
 		switch(grade) {
-		case 'a': case 'A': answer = 7; break;
-		case 'b': case 'B': answer = 4; break;
-		case 'c': case 'C': answer = 2; break;
+		case 'a': case 'A': answer = MenuChoice.interA; break;
+		case 'b': case 'B': answer = MenuChoice.interB; break;
+		case 'c': case 'C': answer = MenuChoice.interC;
 		}
 		return answer;
 	}
@@ -32,7 +33,10 @@ public class HighCreditAccount extends Account {
 	
 	public void showAccInfo() {
 		super.showAccInfo();
-		System.out.println("기본이자 : "+interest+" %");
-		System.out.println("신용등급 : "+grade);
+		System.out.println("기본이자 : "+interest+" %  |  신용등급 : "+grade);
+	}
+	
+	public String toString() {
+		return super.toString()+" | 기본이자(%) : "+interest+" | 신용등급 : "+grade;
 	}
 }

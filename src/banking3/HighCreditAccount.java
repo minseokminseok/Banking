@@ -1,43 +1,41 @@
 package banking3;
 
-import banking1.Account;
-public class HighCreditAccount extends Account{
-	 double normalRate;
-	 double extraRate;
-	 String creditRating;
-	 
-	 //생성자
-	 //String accountNumber, String name, int balance, double normalRate, double extraRate, char creditRating)
-	 public HighCreditAccount(String accountNumber, String name, int balance, double normalRate, String creditRating, double extraRate) { 
-		 super(accountNumber,name,balance);
-		 this.normalRate = normalRate;
-		 this.extraRate = extraRate;
-		 this.creditRating = creditRating;
-	 }
-	 
-	 @Override
-	public int plusBalance(int money) {
-		 
-		if(creditRating.charAt(0) == 'a' || creditRating.charAt(0) == 'A') {
-			extraRate = 0.07;
+import banking3.Account;
+import banking3.MenuChoice;
+
+public class HighCreditAccount extends Account implements MenuChoice {
+	private int interest;
+	private char grade;
+	
+	public int getInterest() {
+		return interest;
+	}
+
+	public int getHighInter(char grade) {
+		int answer = 0;
+		switch(grade) {
+		case 'a': case 'A': answer = MenuChoice.interA; break;
+		case 'b': case 'B': answer = MenuChoice.interB; break;
+		case 'c': case 'C': answer = MenuChoice.interC;
 		}
-		if(creditRating.charAt(0) == 'b' || creditRating.charAt(0) == 'B') {
-			extraRate = 0.04;
-		}
-		if(creditRating.charAt(0) == 'c' || creditRating.charAt(0) == 'C') {
-			extraRate = 0.02;
-		}
-		 
-		 
-		 //신용계좌 : 잔고 + (잔고 * 기본이자) + (잔고 * 추가이자) + 입금액
-		balance += (balance * normalRate *0.01 ) +(balance * extraRate*0.01) + money;
-		return balance;
+		return answer;
+	}
+
+	public HighCreditAccount(String accNum, String name, int bal, int inter, char grade) {
+		super(accNum, name, bal);
+		interest = inter;
+		this.grade = grade;
+	}	
+	
+	public boolean plusMoney(int money) {
+		int sum = super.getBal() + (super.getBal()*interest/100) + (super.getBal()*getHighInter(grade)/100) + money;
+		super.setBal(sum);
+		return true;
 	}
 	
-	 @Override
-	public void showAllData() {
-		 System.out.println("신용계좌정보");
-		super.showAllData();
+	public void showAccInfo() {
+		super.showAccInfo();
+		System.out.println("기본이자 : "+interest+" %");
+		System.out.println("신용등급 : "+grade);
 	}
-	 
 }

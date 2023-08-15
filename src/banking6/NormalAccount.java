@@ -1,6 +1,7 @@
-package banking3;
+package banking6;
 
 public class NormalAccount extends Account {
+//	private static final long serialVersionUID = 1L;
 	private int interest;
 	
 	public int getInterest() {
@@ -20,6 +21,10 @@ public class NormalAccount extends Account {
 		
 	public void showAccInfo() {
 		super.showAccInfo();
-		System.out.println("기본이자 : "+interest+" %");
+		System.out.print("  |  기본이자 : "+interest+" %");
+	}
+	
+	public String toString() {
+		return super.toString()+" | 기본이자(%) : "+interest;
 	}
 }

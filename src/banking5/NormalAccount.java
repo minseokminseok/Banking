@@ -1,4 +1,4 @@
-package banking4;
+package banking5;
 
 public class NormalAccount extends Account {
 	private int interest;

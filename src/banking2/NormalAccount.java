@@ -1,58 +1,25 @@
 package banking2;
 
-import java.util.Scanner;
-
-import banking1.Account;
-
-public class NormalAccount extends Account{
-
+public class NormalAccount extends Account {
+	private int interest;
 	
-	 //Scanner scan = new Scanner(System.in);
-	 //String AccountNumber =  scan.nextLine();
-	 double normalRate;
-	 //생성자
-	 public NormalAccount(String AccountNumber, String name, int balance,  double normalRate) {
-		 
-		 super(AccountNumber,name,balance);
+	public int getInterest() {
+		return interest;
+	}
+
+	public NormalAccount(String accNum, String name, int bal, int inter) {
+		super(accNum, name, bal);
+		interest = inter;
+	}
+	
+	public boolean plusMoney(int money) {
+		int sum = super.getBal() + super.getBal()*interest/100 + money;
+		super.setBal(sum);
+		return true;
+	}
 		
-		 this.normalRate = normalRate;
-	 }
-	 
-	
-	
-	@Override
-	public int plusBalance(int money) {
-		balance += (balance*normalRate*0.01) + money;
-				return balance;
+	public void showAccInfo() {
+		super.showAccInfo();
+		System.out.println("기본이자 : "+interest+" %");
 	}
-	
-	
-	@Override
-	public void showAllData() {
-		System.out.println("normal계좌 기본정보");
-		super.showAllData();
-		System.out.println("기본이자:"+normalRate);
-	}
-	/*public void showAllData() {
-		System.out.println("==대딩친구(전체정보)==");
-		super.showAllData();
-		System.out.println("전공:"+ major);
-	}*/
-	
-	 
-	 
-	 
-	 
-	 
-	 // balance = balance +(balance+0.02) + depositMoney();
-	 
-	
-	 
-	 
-	
-	
-	
-	
-	
-
 }

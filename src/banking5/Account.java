@@ -1,9 +1,6 @@
-package banking1;
-
-import java.util.InputMismatchException;
-import java.util.Scanner;
-
-public class Account {
+package banking5;
+import java.io.Serializable;
+abstract class Account implements Serializable {
 	private String accNum, name;
 	private int bal;
 	
@@ -17,11 +14,8 @@ public class Account {
 		this.name = name;
 		this.bal = bal;
 	}
-
 	public void showAccInfo() {
-		System.out.println("---------------");
 		System.out.println("계좌번호 : "+accNum+"\n고객명 : "+name+"\n잔액 : "+bal);
-		System.out.println("---------------");
 	}
 	
 	public boolean plusMoney(int money) {
@@ -33,4 +27,16 @@ public class Account {
 		bal -= money;
 		return true;
 	}
+	
+	public int hashCode() {
+		int rCode = this.accNum.hashCode();
+		return rCode;
+	}
+	
+	public boolean equals(Object obj) {
+		Account ac = (Account) obj;
+		if(ac.accNum.equals(this.accNum)) return true;
+		else return false;
+	}
 }
+
