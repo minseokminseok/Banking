@@ -8,6 +8,7 @@ public class AccountManager implements MenuChoice {
 	public static Scanner sc = new Scanner(System.in);
 	static HashSet<Account> set = new HashSet<Account>();
 		
+	
 	public static void showMenu() {
 		System.out.println("===Menu===\n1. 계좌개설 \n2. 입금 \n3. 출금 \n4. 전체계좌정보출력 \n5. 계좌정보 삭제\n6. 프로그램 종료\n선택 : ");
 	}

@@ -23,3 +23,4 @@ public class NormalAccount extends Account {
 		System.out.println("기본이자 : "+interest+" %");
 	}
 }
+

@@ -3,6 +3,7 @@ package banking3;
 import banking3.Account;
 import banking3.MenuChoice;
 
+
 public class HighCreditAccount extends Account implements MenuChoice {
 	private int interest;
 	private char grade;

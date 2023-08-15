@@ -4,6 +4,7 @@ public class Account {
 	private String accNum, name;
 	private int bal;
 	
+	
 	public String getAccNum() {return accNum;}
 	public String getName() {return name;}
 	public int getBal() {return bal;}

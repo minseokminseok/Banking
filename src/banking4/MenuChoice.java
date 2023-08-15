@@ -12,3 +12,4 @@ public interface MenuChoice {
 	int interB = 4;
 	int interC = 2;
 }
+

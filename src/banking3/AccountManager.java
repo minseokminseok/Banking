@@ -3,6 +3,7 @@ package banking3;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+
 public class AccountManager implements MenuChoice {
 	public static Scanner sc = new Scanner(System.in);
 	static Account[] accounts = new Account[50];

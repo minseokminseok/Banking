@@ -26,6 +26,7 @@ public class BankingSystemMain implements MenuChoice {
 				System.out.println("프로그램 종료"); return;
 			default : System.out.println("범위가 잘못되었습니다. \n1~5사이의 숫자를 입력해주세요.");
 			}
+			
 			}
 			}catch(InputMismatchException e) {
 				System.out.println("잘못입력하셨습니다. 숫자가 아닙니다.");

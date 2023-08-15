@@ -7,6 +7,7 @@ public interface MenuChoice {
 	int INQUIRE = 4;
 	int EXIT = 5;
 	
+	
 	double interA = 0.07;
 	double interB = 0.04;
 	double interC = 0.02;

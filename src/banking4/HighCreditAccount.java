@@ -1,5 +1,6 @@
 package banking4;
 
+
 public class HighCreditAccount extends Account implements MenuChoice {
 	private int interest;
 	private char grade;

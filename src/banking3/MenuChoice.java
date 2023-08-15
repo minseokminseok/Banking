@@ -1,5 +1,6 @@
 package banking3;
 
+
 public interface MenuChoice {
 	int MAKE = 1;
 	int DEPOSIT = 2;

@@ -18,6 +18,7 @@ public class HighCreditAccount extends Account {
 		return answer;
 	}
 
+	
 	public HighCreditAccount(String accNum, String name, int bal, int inter, char grade) {
 		super(accNum, name, bal);
 		interest = inter;

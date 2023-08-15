@@ -36,3 +36,4 @@ public class HighCreditAccount extends Account implements MenuChoice {
 		System.out.println("신용등급 : "+grade);
 	}
 }
+

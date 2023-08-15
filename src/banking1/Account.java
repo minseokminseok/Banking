@@ -21,7 +21,7 @@ public class Account {
 	public void showAccInfo() {
 		System.out.println("---------------");
 		System.out.println("계좌번호 : "+accNum+"\n고객명 : "+name+"\n잔액 : "+bal);
-		System.out.println("---------------");
+		System.out.println("----------------");
 	}
 	
 	public boolean plusMoney(int money) {

@@ -12,6 +12,7 @@ public class NormalAccount extends Account {
 		interest = inter;
 	}
 	
+	
 	public boolean plusMoney(int money) {
 		int sum = super.getBal() + super.getBal()*interest/100 + money;
 		super.setBal(sum);

@@ -1,7 +1,8 @@
-package banking5;
+package banking2;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
+
 
 public class AccountManager implements MenuChoice {
 	public static Scanner sc = new Scanner(System.in);

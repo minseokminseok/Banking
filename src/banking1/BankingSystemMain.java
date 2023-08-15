@@ -23,7 +23,7 @@ public class BankingSystemMain implements MenuChoice {
 				showAccInfo(); break;
 			case MenuChoice.EXIT:
 				System.out.println("프로그램 종료"); return;
-			default : System.out.println("범위가 잘못되었습니다. \n1~5사이의 숫자를 입력해주세요.");
+			default : System.out.println("범위가 잘못되었습니다~. \n1~5사이의 숫자를 입력해주세요.");
 			}
 		}
 	}

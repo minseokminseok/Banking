@@ -1,5 +1,6 @@
 package banking4;
 
+
 abstract class Account {
 	private String accNum, name;
 	private int bal;
