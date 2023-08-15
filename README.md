@@ -1,1 +1,1 @@
-# Banking
+# JavaConsoleProject
