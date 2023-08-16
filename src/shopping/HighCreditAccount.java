@@ -1,6 +1,7 @@
-package banking5;
+package shopping;
 
 public class HighCreditAccount extends Account implements MenuChoice {
+//	private static final long serialVersionUID = 1L;
 	private int interest;
 	private char grade;
 	
@@ -32,7 +33,10 @@ public class HighCreditAccount extends Account implements MenuChoice {
 	
 	public void showAccInfo() {
 		super.showAccInfo();
-		System.out.println("기본이자 : "+interest+" %");
-		System.out.println("신용등급 : "+grade);
+		System.out.println("기본이자 : "+interest+" %  |  신용등급 : "+grade);
+	}
+	
+	public String toString() {
+		return super.toString()+" | 기본이자(%) : "+interest+" | 신용등급 : "+grade;
 	}
 }

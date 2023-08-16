@@ -1,4 +1,4 @@
-package banking6;
+package shopping;
 
 import java.io.EOFException;
 import java.io.FileInputStream;
@@ -131,7 +131,7 @@ public class AccountManager implements MenuChoice {
 				}
 			}
 		}catch(InputMismatchException e) {
-			System.out.println("[예외발생] 숫자만 입력하세요.");
+			System.out.println("[예외발생] 숫자만 입력하세요.~");
 			sc.nextLine();
 		}
 //		}

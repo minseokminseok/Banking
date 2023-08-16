@@ -220,6 +220,3 @@ public class AccountManager implements MenuChoice {
 		System.out.println("파일로 저장 성공했습니다. \n프로그램을 종료합니다.");
 	}
 }
-
-
-

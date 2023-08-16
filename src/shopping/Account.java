@@ -1,4 +1,4 @@
-package banking5;
+package shopping;
 
 import java.io.Serializable;
 
@@ -18,7 +18,7 @@ abstract class Account implements Serializable {
 	}
 
 	public void showAccInfo() {
-		System.out.println("계좌번호 : "+accNum+"\n고객명 : "+name+"\n잔액 : "+bal);
+		System.out.print("계좌번호 : "+accNum+"  |  고객명 : "+name+"  |  잔액 : "+bal);
 	}
 	
 	public boolean plusMoney(int money) {
@@ -40,5 +40,9 @@ abstract class Account implements Serializable {
 		Account ac = (Account) obj;
 		if(ac.accNum.equals(this.accNum)) return true;
 		else return false;
+	}
+	
+	public String toString() {
+		return "계좌번호 : "+accNum+" | 고객명 : "+name+" | 잔액 : "+bal;
 	}
 }

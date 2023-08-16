@@ -1,4 +1,4 @@
-package banking5;
+package shopping;
 
 public interface MenuChoice {
 	int MAKE = 1;
@@ -6,7 +6,8 @@ public interface MenuChoice {
 	int WITHDRAW = 3;
 	int INQUIRE = 4;
 	int DELETE = 5;
-	int EXIT = 6;
+	int SAVE = 6;
+	int EXIT = 7;
 	
 	int interA = 7;
 	int interB = 4;
